@@ -1,1 +1,12 @@
-../../naughty_strings/data/naughty_strings.escape.sql
+/*!40014 SET FOREIGN_KEY_CHECKS=0*/;
+/*!40101 SET NAMES binary*/;
+INSERT INTO `escape` VALUES
+('''', '"'),
+('"', ''''''),
+('''''', '""'),
+('""', '''"'''),
+('''"''', '"''''''"''"'),
+('"''''''''"''"', '"''"''''''''''"'),
+('"''"''"''''''''"', ''),
+('a",b,"a', 'a,"c",a'),
+('bbaa|*|aabb', 'bba|*|a|*|abb');
